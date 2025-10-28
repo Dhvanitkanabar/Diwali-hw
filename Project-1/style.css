@@ -1,4 +1,4 @@
-     /* --- Basic Reset & Font --- */
+
         body {
             margin: 0;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -129,14 +129,7 @@
         .nav-icon {
             padding: 4px;
         }
-        /* ====================================================
---- 3b. MEGA MENU NAVIGATION ---
-====================================================
-*/
-
-/* This positions the mega menu relative to the main nav bar.
-  Your ".main-nav" already has "position: relative", which is perfect.
-*/
+      
 .mega-menu {
     position: absolute;
     top: 80px; /* This is the height of your .main-nav */
@@ -155,8 +148,7 @@
     z-index: 100;
 }
 
-/* This shows the mega menu when you hover the parent "li"
-*/
+
 .nav-item-with-megamenu:hover .mega-menu {
     visibility: visible;
     opacity: 1;
@@ -175,11 +167,10 @@
 
 .mega-menu-column {
     flex: 1; /* Each column takes up equal space */
-    min-width: 170px; /* Prevents columns from getting too narrow */
+    min-width: 170px; 
 }
 
-/* Styling for the column headings (e.g., "Featured")
-*/
+
 .mega-menu-column h3 {
     font-size: 16px;
     font-weight: 600;
@@ -198,9 +189,7 @@
     margin-bottom: 12px;
 }
 
-/* This resets the link styles to match the image
-  (Stops them from looking like the main nav links)
-*/
+
 .mega-menu-column a {
     display: block;
     padding: 0;
@@ -215,10 +204,6 @@
     color: #111; /* Darken on hover */
     border-bottom: none; /* Just to be sure */
 }
-/* ====================================================
---- 3c. NOTIFICATION MENU (for SNKRS) ---
-====================================================
-*/
 
 .mega-menu--notification {
     background-color: #f5f5f5; /* Light grey background from image */
@@ -234,7 +219,6 @@
     font-weight: 400;
 }
 
-        /* --- CSS-Only Slider Styles --- */
         @keyframes sliding {
             0%, 20% { transform: translateX(0%); }
             25%, 45% { transform: translateX(-20%); }
@@ -274,7 +258,6 @@
             background-position: center; 
         }
 
-        /* Styles for the content on top of the banner */
         .slide-content h2 {
             font-size: 3rem; 
             font-weight: 700;
@@ -305,7 +288,6 @@
             background-color: #eee;
         }
 
-        /* --- FAKE Slider Nav Buttons (For Show) --- */
         .fake-slider-nav {
             position: absolute;
             bottom: 20px;
@@ -330,7 +312,6 @@
             user-select: none; /* Prevents text selection */
         }
         
-        /* --- 5. Athlete Picks Section (ADDED CODE) --- */
         .athlete-picks {
             padding: 0 48px; /* Match site's horizontal padding */
             margin-top: 48px; /* Space above the section */
@@ -383,7 +364,6 @@
             transform: scale(1.03); 
         }
 
-        /* Media query for mobile responsiveness */
         @media (max-width: 768px) {
             .athlete-picks {
                 padding: 0 24px; /* Reduce padding on mobile */
@@ -407,7 +387,6 @@
         .featured-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr); /* 2x2 grid */
-            /* gap: 20px; */
         }
 
         .featured-card {
@@ -425,7 +404,6 @@
             display: block;
         }
 
-        /* --- Content Blocks for Featured Cards --- */
         .card-content {
             position: absolute;
             bottom: 32px;
@@ -452,7 +430,6 @@
             color: rgb(255, 255, 255);
         }
         
-        /* --- Text Styles for Cards --- */
         .card-subtitle {
             font-size: 1rem;
             font-weight: 500;
@@ -471,7 +448,6 @@
             margin-bottom: 16px;
         }
         
-        /* --- Full Card Link (for cards without buttons) --- */
         .full-card-link {
             position: absolute;
             top: 0;
@@ -483,7 +459,6 @@
             color: transparent;
         }
 
-        /* --- Icon Style for "Just In" Card --- */
         .card-top-right .nike-swoosh-icon {
             width: 60px;
             height: 60px;
@@ -513,7 +488,6 @@
             transition: background-color 0.3s ease;
         }
         
-        /* --- Responsiveness for Featured Section --- */
         @media (max-width: 768px) {
             .featured-section {
                 padding: 0 24px;
@@ -542,12 +516,7 @@
             }
         }
         
-        /* ====================================================
-        --- 6. NIKE x NBA CAROUSEL (NEWLY ADDED CODE) --- 
-        ====================================================
-        */
 
-        /* Main carousel container */
         .nba-carousel {
             max-width: 100%;
             margin: 48px 0; /* Adds space above and below */
@@ -555,7 +524,7 @@
             box-sizing: border-box; /* Ensures padding doesn't add to width */
         }
 
-        /* Header with title and nav buttons */
+
         .nba-carousel__header {
             display: flex;
             justify-content: space-between;
@@ -580,26 +549,22 @@
             cursor: pointer;
             margin-left: 0.5rem;
             color: #cccccc;
-            
-            /* Style to show they are non-functional */
+
             cursor: not-allowed;
             opacity: 0.6;
         }
 
-        /* --- NEW STYLED SCROLLBAR CODE for NBA Carousel --- */
     .nba-carousel__viewport {
     overflow-x: auto; 
     scroll-snap-type: x mandatory;
     margin: 0 -10px; 
     padding: 0 10px; 
     
-    /* --- For Firefox --- */
-    /* Sets thumb and track color */
+   
     scrollbar-color: #c1c1c1 #f1f1f1;
     scrollbar-width: thin;
     }   
 
-    /* --- For Chrome, Safari, and Edge --- */
         .nba-carousel__viewport::-webkit-scrollbar {
             height: 6px; /* Sets the height of the horizontal scrollbar */
         }
@@ -615,7 +580,6 @@
             background-color: #a8a8a8; /* Makes it slightly darker on hover */
         }
 
-        /* 3. The Slider: The long container for all 10 cards */
         .nba-carousel__slider {
             display: flex;
             gap: 1.5rem; /* Space between cards */
@@ -625,10 +589,8 @@
         /* THE PRODUCT CARD */
 
       .nba-product-card {
-    /* 4. The Card Size: Each card is 420px wide (CHANGED) */
     flex: 0 0 470px;
 
-    /* 5. The Magic: Tells the viewport to snap to the start of this element */
     scroll-snap-align: start;
 
     background-color: transparent; /* Use page background */
@@ -638,7 +600,6 @@
 .nba-product-card__image {
     background-color: #ffffff;
     width: 100%;
-    /* Ensure all images are the same height (CHANGED) */
     height: 470px;
     border-radius: 8px; /* Add radius to image bg */
 }
@@ -649,7 +610,6 @@
             object-fit: cover; /* Covers the area, may crop image */
         }
 
-        /* Placeholder styling for cards 4-10 */
         .nba-product-card__image.placeholder {
             display: grid;
             place-items: center;
@@ -681,7 +641,6 @@
             margin: 0;
         }
 
-        /* Responsive adjustments for carousel */
         @media (max-width: 768px) {
             .nba-carousel {
                 padding: 0 24px; /* Match mobile padding */
@@ -693,14 +652,11 @@
                 height: 280px;
             }
         }
-       /* Main "Shop by Sport" container */
 .shop-by-sport {
-    /* max-width: 1200px; <-- REMOVE THIS */
-    margin: 58px 0; /* <-- REMOVE 'auto' */
-    padding: 0 58px; /* <-- ADD THIS to match your other sections */
+    margin: 58px 0; 
+    padding: 0 58px; 
 }
 
-/* Header with title and nav buttons */
 .sport-carousel-header {
     display: flex;
     justify-content: space-between;
@@ -726,23 +682,17 @@
     margin-left: 0.5rem;
     color: #cccccc; /* Disabled color */
     
-    /* Style to show they are non-functional */
-    /* cursor: not-allowed; */
-    /* opacity: 0.8; */
+    
 }
 
-/* --- NEW STYLED SCROLLBAR CODE for Sport Carousel --- */
 .sport-carousel-viewport {
     overflow-x: auto; 
     scroll-snap-type: x mandatory;
 
-    /* --- For Firefox --- */
-    /* Sets thumb and track color */
     scrollbar-color: #c1c1c1 #f1f1f1;
     scrollbar-width: thin;
 }
 
-/* --- For Chrome, Safari, and Edge --- */
 .sport-carousel-viewport::-webkit-scrollbar {
     height: 6px; /* Sets the height of the horizontal scrollbar */
 }
@@ -757,21 +707,17 @@
 .sport-carousel-viewport::-webkit-scrollbar-thumb:hover {
     background-color: #a8a8a8; /* Makes it slightly darker on hover */
 }
-/* 3. The Slider: The long container for all 6 cards */
 .sport-carousel-slider {
     display: flex;
     gap: 1.5rem; /* Space between cards (24px) */
     padding-bottom: 1rem; 
 }
 
-/* THE SPORT CARD
-*/
+
 
 .sport-card {
-    /* 4. The Card Size: Each card is 400px wide */
     flex: 0 0 400px;
     
-    /* 5. The Magic: Tells the viewport to snap to the start of this element */
     scroll-snap-align: start;
     
     text-decoration: none;
@@ -792,7 +738,6 @@
     margin: 1rem 0 0 0; /* Space between image and text */
 }
 
-/* Responsive adjustments for mobile */
 @media (max-width: 768px) {
     .shop-by-sport {
         padding: 0 24px; /* Reduce side padding on mobile */
@@ -806,23 +751,13 @@
         font-size: 1.25rem;
     }
 }
-/* ====================================================
---- 8. SHOP BY ICONS CAROUSEL (NEWLY ADDED) --- 
-====================================================
-*/
 
-/* ====================================================
---- 8. SHOP BY ICONS CAROUSEL (NEWLY ADDED) --- 
-====================================================
-*/
 
-/* Main container */
 .shop-by-icons {
     margin: 48px 0;
     padding: 0 48px; /* Match site's horizontal padding */
 }
 
-/* Header with title and nav buttons */
 .icons-carousel-header {
     display: flex;
     justify-content: space-between;
@@ -850,19 +785,15 @@
     opacity: 0.8;
 }
 
-/* THE SLIDER MECHANISM */
 
-/* 1. The Viewport: Holds the slider and scrollbar */
 .icons-carousel-viewport {
     overflow-x: auto; /* Allows horizontal scrolling */
     scroll-snap-type: x mandatory; /* Makes it snap */
     
-    /* --- Styled Scrollbar (Firefox) --- */
     scrollbar-color: #c1c1c1 #f1f1f1;
     scrollbar-width: thin;
 }
 
-/* --- Styled Scrollbar (Chrome, Safari, Edge) --- */
 .icons-carousel-viewport::-webkit-scrollbar {
     height: 6px;
 }
@@ -879,30 +810,18 @@
 }
 
 
-/* 3. The Slider: The long container for all 9 cards */
 .icons-carousel-slider {
     display: flex;
     gap: 1.5rem; /* Space between cards (24px) */
     padding-bottom: 1rem; /* Space for the scrollbar */
 }
 
-/* ====================================================
---- THIS IS THE CSS THAT CREATES THE OVERLAP EFFECT ---
-====================================================
-*/
 
-/* ====================================================
---- 8. SHOP BY ICONS CAROUSEL (NEW EFFECT) --- 
-====================================================
-*/
-
-/* Main container */
 .shop-by-icons {
     margin: 48px 0;
     padding: 0 48px; 
 }
 
-/* Header with title and nav buttons */
 .icons-carousel-header {
     display: flex;
     justify-content: space-between;
@@ -930,7 +849,6 @@
     opacity: 0.8;
 }
 
-/* THE SLIDER MECHANISM */
 
 .icons-carousel-viewport {
     overflow-x: auto; 
@@ -961,10 +879,7 @@
     padding-bottom: 1rem; 
 }
 
-/* ====================================================
---- NEW CARD STYLES WITH "ZOOM ON HOVER" EFFECT ---
-====================================================
-*/
+
 .icon-card {
     /* 1. Sizing and Snap */
     flex: 0 0 320px; 
@@ -983,26 +898,19 @@
 }
 
 .icon-card img {
-    /* 1. Image Sizing (THE OTHER FIX) */
     width: 100%;
     height: 100%;
     
-    /* This forces all your mixed images to fill the card.
-       It will crop them to fit, but they will all look uniform. */
+
     object-fit: cover; 
     
-    /* 2. The New Effect */
-    /* This makes the hover zoom smooth */
     transition: transform 0.4s ease-out;
 }
 
-/* 3. THIS IS THE "INTERESTING" EFFECT */
 .icon-card:hover img {
-    /* When you hover the card, the image scales up */
     transform: scale(1.1);
 }
 
-/* This adds the dark gradient at the bottom */
 .icon-card::after {
     content: '';
     position: absolute;
@@ -1111,21 +1019,21 @@
     color: #757575;
 }
 
-/* --- Bottom Bar: Copyright + Legal --- */
+
 .footer-bottom-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Allow wrapping */
+    flex-wrap: wrap; 
     gap: 20px;
     padding-top: 20px;
-    border-top: 1px solid #e5e5e5; /* The faint line from the image */
+    border-top: 1px solid #e5e5e5; 
     font-size: 12px;
-    color: #757575; /* Lighter gray for this section */
+    color: #757575; 
 }
 
 .copyright small {
-    font-size: inherit; /* Inherit 12px from parent */
+    font-size: inherit;
     color: inherit;
 }
 
@@ -1135,28 +1043,27 @@
     margin: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 24px; /* Space between legal links */
+    gap: 24px; 
 }
 
 .footer-legal-links a {
     text-decoration: none;
-    color: #757575; /* Lighter gray */
+    color: #757575; 
     font-size: 12px;
 }
 
 .footer-legal-links a:hover {
-    color: #111111; /* Darker on hover */
+    color: #111111; 
 }
 
-.footer-legal-links a span { /* Dropdown arrow */
+.footer-legal-links a span { 
     font-weight: normal;
     margin-left: 3px;
 }
 
-/* --- Responsive for Mobile --- */
 @media (max-width: 960px) {
     .site-footer {
-        padding: 30px 20px; /* Reduce padding on mobile */
+        padding: 30px 20px; 
     }
 
     .footer-main {
@@ -1166,11 +1073,11 @@
 
     .footer-links-container {
         flex-direction: column;
-        gap: 30px; /* Space between stacked columns */
+        gap: 30px;
     }
     
     .footer-column {
-        min-width: 100%; /* Full width */
+        min-width: 100%; 
     }
 
     .footer-location {
@@ -1179,24 +1086,19 @@
 
     .footer-bottom-bar {
         flex-direction: column;
-        align-items: flex-start; /* Align all to the left */
+        align-items: flex-start; 
         gap: 15px;
     }
 
     .footer-legal-links ul {
         flex-direction: column;
         align-items: flex-start;
-        gap: 12px; /* Space between stacked legal links */
+        gap: 12px;
     }
 }
-/* ====================================================
---- RESPONSIVE NAVIGATION STYLES ---
-====================================================
-*/
 
-/* 1. Hamburger Button (Hidden on Desktop) */
 .mobile-menu-button {
-    display: none; /* Hidden by default */
+    display: none; 
     background: none;
     border: none;
     padding: 8px;
@@ -1208,7 +1110,7 @@
     z-index: 101;
 }
 
-/* 2. Mobile Menu Overlay (Hidden on Desktop) */
+
 .mobile-menu-overlay {
     position: fixed;
     top: 0;
