@@ -32,7 +32,32 @@ body {
 .nav-text a{
     text-decoration: none;
     color: black;
+    position: relative;
 }
+.nav-text a::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    transform: scaleX(0);
+    /* color: red; */
+    /* text-align: center; */
+    /* transform-origin: right; */
+    
+    background-color: blue;
+    transition: all 0.5s ease-in;
+}
+.nav-text a:hover::after{
+    /* width: 100%; */
+    transform: scaleX(1);
+    transform-origin:right ;
+}
+/* .nav-text a:not(:hover)::after{
+    transform-origin: left;
+} */
+
 .logo{
     width: 185px;
     height: 185px;
